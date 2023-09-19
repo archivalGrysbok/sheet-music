@@ -8,11 +8,12 @@
 mynotes = {
   \relative c' {
   \time 4/4
-  a'1 b1(
+  \override Glissando.style = #'zigzag
+  a'1\glissando b1(
     <<
       {
         \voiceOne
-         b1) a1
+         b1)\glissando\2 a1\2
       }
       \new Bottom {
         \voiceTwo
@@ -26,7 +27,7 @@ mynotes = {
 
     e2. f4
     d2 e2
-    b1( b1) \break
+    e1 b1 \break
 
     e2. f4
     d2 e2
