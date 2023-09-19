@@ -2,20 +2,21 @@
   title = "End Times"
   subtitle ="from 'Outer Wilds'"
   composer = "Andrew Prahlow"
-meter = "tuning: dulcimer in Gcg"
+  meter = "tuning: dulcimer in GCG (note: bass G string is 2 octaves lower than melody G string)"
 }
 
 mynotes = {
   \relative c' {
   \time 4/4
+  a'1 b1(
     <<
       {
         \voiceOne
-        a'1 b1( b1) a1
+         b1) a1
       }
       \new Bottom {
         \voiceTwo
-         r1 r1 a,, a
+         a,, a
       }
     >> \break
 
@@ -53,11 +54,11 @@ mynotes = {
 
 \score {
 <<
-\transpose c c'
+
   \new Staff {
     \mynotes
     }
-    \transpose g g'
+%    \transpose g g'
   \new TabStaff {
       \mynotes
       }
@@ -66,7 +67,7 @@ mynotes = {
   \layout {
   \context {
     \TabStaff
-    stringTunings = \stringTuning <g c' g'>
+    stringTunings = \stringTuning <g, c' g'>
     stringOneTopmost = ##f
     \with {
         fretLabels = #'(
