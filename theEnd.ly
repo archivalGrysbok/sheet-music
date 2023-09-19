@@ -2,6 +2,7 @@
   title = "End Times"
   subtitle ="from 'Outer Wilds'"
   composer = "Andrew Prahlow"
+meter = "tuning: dulcimer in Gcg"
 }
 
 mynotes = {
