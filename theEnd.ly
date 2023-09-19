@@ -1,18 +1,30 @@
 \header {
-  title = "Untitled"
-  composer = "Composer"
+  title = "End Times"
+  subtitle ="from 'Outer Wilds'"
+  composer = "Andrew Prahlow"
 }
 
 mynotes = {
   \relative c' {
   \time 4/4
-    e2. f4 
+    <<
+      {
+        \voiceOne
+        a'1 b1( b1) a1
+      }
+      \new Bottom {
+        \voiceTwo
+         r1 r1 a,, a
+      }
+    >> \break
+
+    e''2. f4 
     d2 e2 
     c1( c1) \break
 
     e2. f4
     d2 e2
-    e1( b1) \break
+    b1( b1) \break
 
     e2. f4
     d2 e2
@@ -26,7 +38,7 @@ mynotes = {
         \voiceOne
         e1( e1)
       }
-      \new Voice {
+      \new Bottom {
         \voiceTwo
         a,1 g2 f2 a1
       }
@@ -38,12 +50,13 @@ mynotes = {
 }
 
 
-
 \score {
 <<
+\transpose c c'
   \new Staff {
     \mynotes
     }
+    \transpose g g'
   \new TabStaff {
       \mynotes
       }
