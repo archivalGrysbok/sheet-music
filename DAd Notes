@@ -1,0 +1,48 @@
+\header {
+  title = "All my notes"
+  composer = "Stacy Haponik"
+meter = "tuning: diatonic dulcimer in DAd"
+}
+
+mynotes = {
+    \relative {
+    \time 3/4 
+    \set Staff.printKeyCancellation = ##f
+      d\3 e\3 fis\3 g\3 a\3 b\3 c\3 d\3 e\3 \bar "||" \break
+      a,\2 b\2 cis\2 d\2 e\2 fis\2 g\2 a\2 b\2 \bar "||" \break
+      d,\1 e\1 fis\1 g\1 a\1 b\1 c\1 d\1 e\1 \bar "||"
+      }
+    }
+
+\score {
+<<
+  \new Staff {
+    \set Staff.midiInstrument = #"dulcimer"
+    \mynotes
+    }
+  \new TabStaff {
+      \mynotes
+      }
+    >>
+  
+  \midi {}
+  \layout {
+  indent = 0
+  \context {
+    \TabStaff
+%    stringTunings = \stringTuning <g c' g'>
+    stringTunings = \stringTuning <d a d'>    
+
+    stringOneTopmost = ##f
+    \with {
+        fretLabels = #'(
+        "0" "0+" "1" "1+" "2" "3" "3+" "4" "4+" "5" "6" "6+"
+        "7" "7+" "8" "8+" "9" "10" "10+" "11" "11+" "12" "13" "13+"
+        "14" "14+" "15" "15+" "16" "17" "17+" "18" "18+" "19" "20" "20+"
+        )
+        tablatureFormat = #fret-letter-tablature-format
+        fontSize = #2
+        }
+    }   
+  }
+}
