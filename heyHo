@@ -9,7 +9,7 @@ mynotes = {
     \relative {
     \time 4/4 
 
-      g'2 f2 | g4 g8 g8 d2 | g4 g4 a4 a4 |
+      g'2 f2 | g4 g8 g8 d2 | g4 g4 a4 a4 | \break
       
       b8\2 b\2 b\2 b\2 a2 | d4. c8 d4. c8  | d4.( c8 d8 c8) b8\2( a8) 
       
@@ -31,7 +31,16 @@ mynotes = {
       }
     >>
   }
+  \paper {
+  #(set-paper-size "letter")
+  left-margin = 1\in
+  top-margin = 1\in
+}
   \layout {
+
+  indent = 0 
+  
+
   \context {
     \TabStaff
     stringTunings = \stringTuning <d a c'>
