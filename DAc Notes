@@ -4,6 +4,13 @@
 meter = "tuning: diatonic dulcimer in DAc"
 }
 
+\paper {
+  #(set-paper-size "letter")
+  left-margin = 1\in
+  top-margin = 1\in
+}
+
+
 mynotes = {
     \relative {
     \time 3/4 
