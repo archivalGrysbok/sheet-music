@@ -2,7 +2,7 @@
   title = "Hey-Ho, Nobody Home"
   subtitle = "Transcribed from 'Barley Break: an Elizabethan Songbook', 1992.' "
   composer = "Andrew Prahlow"
-meter = "tuning: dulcimer in DAd"
+meter = "tuning: dulcimer in DAc"
 }
 
 mynotes = {
@@ -11,7 +11,7 @@ mynotes = {
 
       g'2 f2 | g4 g8 g8 d2 | g4 g4 a4 a4 |
       
-      b8 b b b a2 | d4. c8 d4. c8  | d4.( c8 d8 c8) b8( a8) 
+      b8\2 b\2 b\2 b\2 a2 | d4. c8 d4. c8  | d4.( c8 d8 c8) b8\2( a8) 
       
       \bar "||"
       }
@@ -34,7 +34,7 @@ mynotes = {
   \layout {
   \context {
     \TabStaff
-    stringTunings = \stringTuning <d a' d'>
+    stringTunings = \stringTuning <d a c'>
     stringOneTopmost = ##f
     \with {
         fretLabels = #'(
