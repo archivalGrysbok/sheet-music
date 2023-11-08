@@ -1,0 +1,217 @@
+\header {
+  title = "Cryderville Jail"
+  meter = "tuning: dulcimer in DAd"
+}
+
+
+mynotes = {
+  \relative c' {
+  
+  \time 3/4
+  
+    a' a a | a g fis | g g g | a2. \break
+
+    fis4 fis fis | fis a a | e e e | e  
+
+    fis^\markup \italic "Chorus" e  d2. b4 a b d d d fis a a fis e d e2 d2(  d2) 
+
+   
+    
+
+  }
+    
+}
+
+\indent = 0
+
+\score {
+<<
+
+
+
+
+  \new Staff {
+
+
+
+    \mynotes
+
+ \addlyrics {
+ \set stanza = "1"
+
+
+Cry -- der -- ville Ja -- il, ain't no jail at all,
+Lice in that ja -- il are chew -- in' the wall.
+
+   It's a hard times in the Cry -- der -- ville Ja -- il,
+   It's hard times, ___  poor boy.
+
+      }
+  }
+
+%    \transpose g g'
+  \new TabStaff {
+      \mynotes
+      }
+    >>
+  }
+  \layout {
+  \context {
+    \TabStaff
+    stringTunings = \stringTuning <d, a' d'>
+    stringOneTopmost = ##f
+    \with {
+        fretLabels = #'(
+        "0" "0+" "1" "1+" "2" "3" "3+" "4" "4+" "5" "6" "6+"
+        "7" "7+" "8" "8+" "9" "10" "10+" "11" "11+" "12" "13" "13+"
+        "14" "14+" "15" "15+" "16" "17" "17+" "18" "18+" "19" "20" "20+"
+        )
+        tablatureFormat = #fret-letter-tablature-format
+        fontSize = #2
+        }
+    }
+
+
+
+    
+  }
+
+
+
+
+
+  
+  
+  
+\markup {
+  \fill-line {
+    % moves the column off the left margin;
+    % can be removed if space on the page is tight
+    \hspace #0.1
+    \column {
+      \line { \bold "2."
+        \column {
+          "There's a big bull ring in the middle of the floor,"
+          "And a damned old jailer to open the door."
+         }
+        }
+      
+      % adds vertical spacing between verses
+      \combine \null \vspace #0.1
+      \line { \bold "3."
+        \column {
+            "Our bed it is made of old rotten rugs,"
+            "And when we lay down we are covered with bugs"
+        }
+      }
+            \combine \null \vspace #0.1
+      \line { \bold "4."
+        \column {
+          "Your pockets he'll pick, and your clothes he will sell,"
+          "Your hands he will handcuff, oh damn him to hell."
+        }
+      }
+
+      % adds vertical spacing between verses
+      \combine \null \vspace #0.1
+      \line { \bold "5."
+        \column {
+          "The bugs they swear if we don't give bail,"
+          "We are bound to get lousy in Cryderville Jail."
+        }
+      }
+
+      % adds vertical spacing between verses
+      \combine \null \vspace #0.1
+      \line { \bold "6."
+        \column {
+        "I wrote to my mother to send me a knife,"
+        "The lice and the chinches have threatened my life."
+        }
+      }
+
+            % adds vertical spacing between verses
+      \combine \null \vspace #0.1
+      \line { \bold "7."
+        \column {
+"And here's to the lawyer, he'll come to your cell,"
+"And swear he will clear you in spite of all Hell."
+        }
+      }
+
+    }
+    % adds horizontal spacing between columns
+    \hspace #0.1
+    \column {
+
+
+
+            % adds vertical spacing between verses
+      \combine \null %\vspace #0.1
+      \line { \bold "8."
+        \column {
+
+"He'll get all of your money before he will rest,"
+"Then he'll say, 'Plead guilty, I think it the best.'"
+        }
+      }
+
+
+            % adds vertical spacing between verses
+      \combine \null \vspace #0.1
+      \line { \bold "9."
+        \column {
+"Old Judge Simpson will read you the law,"
+"The damndest fool judge that you ever saw."
+        }
+      }
+
+
+      \combine \null \vspace #0.1
+      \line { \bold "10."
+        \column {
+"And there sits the jury, a devil of a crew,"
+"They'll look a poor pris'ner clean through and through."
+        }
+      }
+
+
+            \combine \null \vspace #0.1
+      \line { \bold "11."
+        \column {
+"And here's to the sheriff, I like to forgot,"
+"The darndest old rascal we have in the lot."
+        }
+      }
+
+
+            \combine \null \vspace #0.1
+      \line { \bold "12."
+        \column {
+"Your privileges he will take, your clothes he will sell,"
+"Get drunk on your money, oh damn him to hell."
+        }
+      }
+
+
+
+            \combine \null \vspace #0.1
+      \line { \bold "13."
+        \column {
+"And now I have come to the end of my song,"
+"I'll leave it to the boys as I go along."
+        }
+      }
+
+    }
+    % gives some extra space on the right margin;
+    % can be removed if page space is tight
+    \hspace #0.1
+  }
+}
+  
+  
+  \midi {}
+
+
+
