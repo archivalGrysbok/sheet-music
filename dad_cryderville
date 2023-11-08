@@ -3,6 +3,12 @@
   meter = "tuning: dulcimer in DAd"
 }
 
+\paper {
+  #(set-paper-size "letter")
+  left-margin = .5\in
+  top-margin = 1\in
+}
+
 
 mynotes = {
   \relative c' {
