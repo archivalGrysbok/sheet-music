@@ -1,0 +1,187 @@
+\header {
+  title = "The Boy that Burned in the Berryville Jail"
+  subtitle = "Max Hunter Folk Song Collection MFH #47"
+  meter = "tuning: dulcimer in Gcg"
+  
+}
+
+\paper {
+  #(set-paper-size "letter")
+  left-margin = .5\in
+  top-margin = 1\in
+}
+
+
+mynotes = {
+  \relative c' {
+  
+  \time 6/8
+  
+    s8 s s s s f8 | d'8. d16 d8 d c b | 
+    
+    c g g g r8 g  \break
+    
+    a8. a16 a8 a g f16 f16 | d'8 d c b4  \bar "||"
+
+
+
+    
+
+  }
+    
+}
+
+\indent = 0
+
+\score {
+<<
+
+
+
+
+  \new Staff {
+
+
+
+    \mynotes
+
+ \addlyrics {
+ \set stanza = "1"
+
+My name is Flo Ed -- dings, th son of ole Doc
+He'll sure -- ly dis -- own me but I'm one of his flock
+
+      }
+  }
+
+%    \transpose g g'
+  \new TabStaff {
+      \mynotes
+      }
+    >>
+  }
+  \layout {
+  \context {
+    \TabStaff
+    stringTunings = \stringTuning <g, c' g'>
+    stringOneTopmost = ##f
+    \with {
+        fretLabels = #'(
+        "0" "0+" "1" "1+" "2" "3" "3+" "4" "4+" "5" "6" "6+"
+        "7" "7+" "8" "8+" "9" "10" "10+" "11" "11+" "12" "13" "13+"
+        "14" "14+" "15" "15+" "16" "17" "17+" "18" "18+" "19" "20" "20+"
+        )
+        tablatureFormat = #fret-letter-tablature-format
+        fontSize = #2
+        }
+    }
+
+
+
+    
+  }
+
+
+
+\markup {
+  \fill-line {
+    % moves the column off the left margin;
+    % can be removed if space on the page is tight
+    \hspace #0.1
+    \column {
+      \line { \bold "2."
+        \column {
+"No money, no clothes, without one cent"
+"Down to old Carrollton, while robbing I went"
+
+         }
+        }
+      
+      % adds vertical spacing between verses
+      \combine \null \vspace #0.1
+      \line { \bold "3."
+        \column {
+
+"Out of Green Forest, I was hired to work"
+"There they come and handcuffed me and took me to court"
+
+        }
+      }
+            \combine \null \vspace #0.1
+      \line { \bold "4."
+        \column {
+
+"They called in a jury, never cost them a cent"
+"And down to ole Berryville, to jail I was sent"
+
+        }
+      }
+
+      % adds vertical spacing between verses
+      \combine \null \vspace #0.1
+      \line { \bold "5."
+        \column {
+
+"I sent for my Father and thought it all well"
+"He would'nt come near me and I wished him in hell"
+
+        }
+      }
+
+
+
+      % adds vertical spacing between verses
+      \combine \null \vspace #0.1
+      \line { \bold "6."
+        \column {
+
+"No Father, no Mother, no money to spend"
+"They left me here lonely, myself to defend"
+        }
+      }
+
+            % adds vertical spacing between verses
+      \combine \null \vspace #0.1
+      \line { \bold "7."
+        \column {
+
+
+"They brought me my supper, they locked th door fast"
+"And left me all alone to think of th past"
+
+
+        }
+      }
+
+
+            % adds vertical spacing between verses
+      \combine \null \vspace #0.1
+      \line { \bold "8."
+        \column {
+        "Th jail caught fire and I hollered for help"
+        "Th damned ole jailer just lay there and slept"
+        }
+      }
+
+
+            % adds vertical spacing between verses
+      \combine \null \vspace #0.1
+      \line { \bold "9."
+        \column {
+            "I wrapped my blanket 'round me and threw myself down"
+            "And no one came near me till th jail house burned down"
+        }
+      }
+
+
+
+
+    }
+    % gives some extra space on the right margin;
+    % can be removed if page space is tight
+    \hspace #0.1
+  }
+}
+  
+  
+  \midi {}
