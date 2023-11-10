@@ -1,0 +1,192 @@
+\header {
+  title = "The Baggage Coach Ahead"
+  subtitle = "Max Hunter Folk Song Collection MFH #34"
+  date = "As sung by Mr. T. R. Hammond, Osceola, Missouri on September 17, 1958, with tune from
+(MFH #34) - As sung by Mrs. Allie Long Parker, Eureka Springs, Arkansas on July 10, 1958"
+  note = "This is one of the most unusual contacts I have found. Mr. Hammond says that he composed the above song. His story, after finishing one year of college he went to Oklahoma to work. There he met a pretty girl and married her. They went to California to make their home and Mrs. Hammond died ten months and three days after their wedding and left Mr. Hammond with a baby boy. He was bringing his wife back to Oklahoma, for burial at her parents when the story happend on the train."
+  meter = "tuning: dulcimer in Gcg"
+  
+}
+
+\paper {
+  #(set-paper-size "letter")
+  left-margin = 1\in
+  top-margin = 1\in
+}
+
+
+mynotes = {
+  \relative g' {
+  
+  \time 6/8
+  
+    s s4 f4 | b8 c8 d8 g,8 f8 f8 | b8 c8 d8 f,4 f16 f16 |  \break 
+    b16. b32 b8 b8 c8 b8. f16 |  g4. r8 r8  f8 | b8 c8 d8 f8 d8. c16 | \break
+    b8 c8 d8 e4 f,8 | d'8 f,8 d'8 c8.( f,16) f8 | b4. r4.     \bar "||"
+
+    \break
+
+
+
+
+
+
+
+
+   \bar ".|"
+
+
+
+    
+
+  }
+    
+}
+
+\score {
+<<
+
+
+
+
+  \new Staff {
+
+
+
+    \mynotes
+
+          \addlyrics {
+          \set stanza = "1"
+
+One dark stor -- my night
+As th train rat -- tled on
+And th pas -- sen -- ger had all gone to bed __
+Ex -- cept a young man with a babe in his arms
+Who set with a bowed down head
+
+      }
+
+
+
+
+  }
+
+%    \transpose g g'
+  \new TabStaff {
+      \mynotes
+      }
+    >>
+  }
+  \layout {
+  \context {
+    \TabStaff
+    stringTunings = \stringTuning <g, c' g'>
+    stringOneTopmost = ##f
+    \with {
+        fretLabels = #'(
+        "0" "0+" "1" "1+" "2" "3" "3+" "4" "4+" "5" "6" "6+"
+        "7" "7+" "8" "8+" "9" "10" "10+" "11" "11+" "12" "13" "13+"
+        "14" "14+" "15" "15+" "16" "17" "17+" "18" "18+" "19" "20" "20+"
+        )
+        tablatureFormat = #fret-letter-tablature-format
+        fontSize = #2
+        }
+    }
+
+
+
+    
+  }
+
+
+
+\markup {
+  \fill-line {
+    % moves the column off the left margin;
+    % can be removed if space on the page is tight
+    \hspace #0.1
+    \column {
+
+
+      % adds vertical spacing between verses
+            \combine \null \vspace #0.1
+      \line { \bold "3."
+        \column {
+
+"My sweet inocent child"
+"Begin for to cry"
+"As if its poor heart would break"
+"Make th child stop its crying, one angry man said"
+"It's keeping all of us awake"
+             }
+      }
+
+
+      % adds vertical spacing between verses
+            \combine \null \vspace #0.1
+      \line { \bold "4."
+        \column {
+
+"Take it out, cried another"
+"Don't keep it in here"
+"We paid for our berths and want rest"
+"But never a word, said I, with th child"
+"As I fondled him close to my breast"
+
+
+        }
+      }
+      }
+    \column {
+      % adds vertical spacing between verses
+      \combine \null \vspace #0.1
+      \line { \bold "5."
+        \column {
+"Every woman arose"
+"To assist with the child"
+"There were Mothers and Wives on the train"
+"And soon my sweet babe, was sleeping in peace"
+"Without a thought of sorrow or pain"
+
+
+
+        }
+      }
+
+
+
+      % adds vertical spacing between verses
+      \combine \null \vspace #0.1
+      \line { \bold "6."
+        \column {
+"Next morning at the station"
+"I bade them goodbye"
+"God bless you all, I said"
+"And they each had a story, to tell in their home"
+"Of th baggage coach ahead"
+
+        }
+      }
+
+}    \hspace #0.1
+
+
+
+
+      % adds vertical spacing between verses
+      \combine \null \vspace #0.1
+      }
+
+
+
+
+    }
+    % gives some extra space on the right margin;
+    % can be removed if page space is tight
+    \hspace #0.1
+  }
+}
+
+  
+  
+  \midi {}
