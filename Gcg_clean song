@@ -1,0 +1,284 @@
+\header {
+  title = "A Clean Song"
+  meter = "tuning: dulcimer in Gcg"
+  
+}
+
+\paper {
+  #(set-paper-size "letter")
+  left-margin = 1\in
+  top-margin = 1\in
+}
+
+
+mynotes = {
+  \relative g' {
+  
+  \time 3/4
+  
+   s s g \bar "|." c e g, | c e g, | e' f e | \break
+   
+   d2 g,4 
+
+    c e g, | c e g, | e' f e |
+
+
+
+   \bar ".|"
+
+
+
+    
+
+  }
+    
+}
+
+\indent = 0
+
+\score {
+<<
+
+
+
+
+  \new Staff {
+
+
+
+    \mynotes
+
+          \addlyrics {
+          \set stanza = "1"
+
+          There was a young sai -- lor
+          Who looked through the glass,
+          And spied a fair mer -- maid
+          With scales on her 
+      }
+
+       \addlyrics {
+          \set stanza = "2"
+
+          \skip 1 Is -- land Where sea -- gulls
+          Fly o -- ver their nests
+          She combed the long hair
+          That hung o -- ver her
+     }
+
+
+          \addlyrics {
+          \set stanza = "3"
+
+      \skip 1  shoul -- ders And caused her
+        To tick -- le and itch.
+        The sail -- or cried out
+       There's a beau -- ti -- ful
+
+      }
+
+
+
+
+
+  }
+
+%    \transpose g g'
+  \new TabStaff {
+      \mynotes
+      }
+    >>
+  }
+  \layout {
+  \context {
+    \TabStaff
+    stringTunings = \stringTuning <g, c' g'>
+    stringOneTopmost = ##f
+    \with {
+        fretLabels = #'(
+        "0" "0+" "1" "1+" "2" "3" "3+" "4" "4+" "5" "6" "6+"
+        "7" "7+" "8" "8+" "9" "10" "10+" "11" "11+" "12" "13" "13+"
+        "14" "14+" "15" "15+" "16" "17" "17+" "18" "18+" "19" "20" "20+"
+        )
+        tablatureFormat = #fret-letter-tablature-format
+        fontSize = #2
+        }
+    }
+
+
+
+    
+  }
+
+
+
+\markup {
+  \fill-line {
+    % moves the column off the left margin;
+    % can be removed if space on the page is tight
+    \hspace #0.1
+    \column {
+      
+      % adds vertical spacing between verses
+            \combine \null \vspace #0.1
+      \line { \bold "4."
+        \column {
+
+ "mermaid, A-sitting out"
+"There on the rocks,"
+"The crew came around"
+"A-grabbing their"
+
+
+        }
+      }
+
+      % adds vertical spacing between verses
+      \combine \null \vspace #0.1
+      \line { \bold "5."
+        \column {
+
+ "glasses And crowded four deep"
+"To the rail,"
+"All eager to share"
+"In this fine piece of"
+
+
+
+        }
+      }
+
+
+
+      % adds vertical spacing between verses
+      \combine \null \vspace #0.1
+      \line { \bold "6."
+        \column {
+" news. Which the captain soon"
+"Heard from the watch."
+"He tied down the wheel"
+"And he reached for his"
+
+        }
+      }
+
+            % adds vertical spacing between verses
+      \combine \null \vspace #0.1
+      \line { \bold "7."
+        \column {
+
+
+ "crackers And cheese which"
+"He kept near the door."
+"In case he might someday"
+"Encounter a "
+
+
+        }
+      }
+
+
+            % adds vertical spacing between verses
+      \combine \null \vspace #0.1
+      \line { \bold "8."
+        \column {
+
+"mermaid He knew he must"
+"Use all his wits"
+"Crying 'Throw out a line.'"
+"We'll lasso her "
+
+        }
+      }
+
+            % adds vertical spacing between verses
+      \combine \null \vspace #0.1
+      \line { \bold "9."
+        \column {
+"flippers And then we will"
+"Certainly find"
+"If mermaids are better"
+"Before or be "
+        }
+      }
+}    \hspace #0.1
+    \column {
+      % adds vertical spacing between verses
+      \combine \null \vspace #0.1
+      \line { \bold "10."
+        \column {
+"brave My good fellows."
+"The captain then said."
+"With fortune we'll break"
+"Through her mermaiden "
+        }
+      }
+
+      % adds vertical spacing between verses
+      \combine \null \vspace #0.1
+      \line { \bold "11."
+        \column {
+"heading to starboard"
+"They tacked with dispatch."
+"And caught that fair mermaid"
+"Just under her "
+        }
+      }
+
+      % adds vertical spacing between verses
+      \combine \null \vspace #0.1
+      \line { \bold "12."
+        \column {
+"elbows And hustled her"
+"Down below decks,"
+"And each took a turn"
+"At her feminine  "
+        }
+      }
+
+      % adds vertical spacing between verses
+      \combine \null \vspace #0.1
+      \line { \bold "13."
+        \column {
+"setting Her free at the end"
+"Of the farce,"
+"She splashed in the waves,"
+"Falling flat on her "
+        }
+      }
+
+      % adds vertical spacing between verses
+      \combine \null \vspace #0.1
+      \line { \bold "14."
+        \column {
+"after A while one man"
+"Noticed some scabs,"
+"Soon they broke out with the pox"
+"And the scratching"
+        }
+      }
+
+      % adds vertical spacing between verses
+      \combine \null \vspace #0.1
+      \line { \bold "15."
+        \column {
+"With fury,"
+"Cursing with spleen,"
+"This song may be dull"
+"But it's certainly clean."
+        }
+      }
+
+
+
+
+    }
+    % gives some extra space on the right margin;
+    % can be removed if page space is tight
+    \hspace #0.1
+  }
+}
+
+  
+  
+  \midi {}
