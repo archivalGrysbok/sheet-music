@@ -1,0 +1,231 @@
+\header {
+  title = "The Jam On Gerry's Rock"
+  subtitle = "Max Hunter Folk Song Collection MFH #314"
+  date = "As sung by Mr. Fred Smith, Bentonville, Arkansas on June 23, 1958"
+  meter = "tuning: dulcimer in Gcg"  
+}
+
+\paper {
+  #(set-paper-size "letter")
+  left-margin = 1\in
+  top-margin = 1\in
+}
+
+
+mynotes = {
+
+  \relative c' {
+  
+  \time 2/4
+  
+    s s8 d'8 | g,8. b16 d8 d8 | c16 e8. e8  d8 | c8. g16 a8 a8 | 
+    g4 r8 d'8 | d b d g | g16 g8. f8 e8 | d8 e8 f g | 
+    e4 r8 e8 | e8 c8 e8 g8 | g16 g8. e8 d8 | b8. c16 d16 f8. | d4 r8 b8 
+    g8. b16 d8 d8 | c16 e8. e8 d8 | c8 g8 a8 a8 | g4 r4   
+     \bar ".|"
+
+    \break
+  }
+    
+}
+
+
+\score {
+
+<<
+  \new Staff {
+    \mynotes
+
+          \addlyrics {
+          \set stanza = "1"
+
+            Come all of you bold shan -- ty boys
+            And list while I re -- late
+            Con -- cern -- ing a young riv -- er -- man
+            And his un -- time -- ly fate
+
+            Con -- cern -- ing a bold shan -- ty boy
+            So man -- ly too and brave
+            T'was at the jam at Ger -- rys Rock
+            He met his wa -- tery grave
+      }
+
+          \addlyrics {
+          \set stanza = "2"
+            It was one bright Sun -- days morn -- ing
+            As you will quick -- ly hear
+            Th logs were pil -- ing moun -- tain high
+            We could not keep them clear
+
+            Th fore -- man cried, turn out brave lads
+            With hearts dev - oid of fear
+            We'll break th jam at Ger -- rys Rock
+            For Higgins -- town we'll steer}
+
+          \addlyrics {
+          \set stanza = "3"
+           And while par -- ties, they were will -- ing
+            While oth -- ers they were not
+            Fer to work on jams on Sun -- day
+            They did not think they ought
+
+            But six of these brave Canadain boys
+            They vol -- un -- teered to go
+            And break th jam on Ger -- rys Rock
+            With th fore -- man, young Mon -- roe}
+
+
+
+  }
+
+  %\transpose c c'
+      
+  \new TabStaff {
+      \mynotes
+      
+      }
+    >>
+
+
+  }
+
+  \layout {
+  \context {
+    \TabStaff
+    stringTunings = \stringTuning <g, c' g'>
+    stringOneTopmost = ##f
+    \with {
+        fretLabels = #'(
+        "0" "0+" "1" "1+" "2" "3" "3+" "4" "4+" "5" "6" "6+"
+        "7" "7+" "8" "8+" "9" "10" "10+" "11" "11+" "12" "13" "13+"
+        "14" "14+" "15" "15+" "16" "17" "17+" "18" "18+" "19" "20" "20+"
+        )
+        tablatureFormat = #fret-letter-tablature-format
+        fontSize = #2
+        }
+    }
+
+  }
+
+
+
+
+
+\markup { 
+  \column {
+  
+
+                  % adds vertical spacing between verses
+
+                  \line { \bold "4."
+                    \column {
+            "They had not rolled off many logs"
+            "Till they heard his clear voice sing,"
+            "I'll have you boys be on your guard"
+            "For th jam 'll soon give way"
+            "These words were scarcely spoken"
+            "When th mass did break an' go"
+            "And it carried away th six brave youths"
+            "With their foreman, young Monroe"
+            }}
+
+                        \combine \null \vspace #0.1
+        \line { \bold "5."
+        \column {
+"Rest of these bold shanty boys"
+"This sad news come to hear"
+"In search of their dead comrades"
+"For th river they did steer"
+
+"Some of the mangled bodies"
+"A floating down did go"
+"But crushed and bleeding near the shore"
+"Was th form of young Monroe"
+        }      }
+
+
+
+
+    \column {
+      % adds vertical spacing between verses
+
+\combine \null \vspace #0.1
+      \line { \bold "6."
+        \column {
+"They dragged him from his watery grave"
+"Brushed back his raven hair"
+"There one fair form among them"
+"Whose sad cries rung th air"
+"There was one fair form among them"
+"A maid from Sagnaw town"
+"Whose lonesome cries rose to th skies"
+"For her true love who'd gone down"
+        }      }
+
+
+}  
+
+  }   
+  
+  
+  \column { 
+      % adds vertical spacing between verses
+
+
+
+    \column {
+      % adds vertical spacing between verses
+      \combine \null %\vspace #0.1
+
+              
+      \line { \bold "7."
+        \column {
+"Fair Clara was this young girls name"
+"Th rivermens true friend"
+"She and her widowed Mother dear"
+"Lived at th rivers bend"
+
+"Th wages of her own true love"
+"The boss to her did pay"
+"And the shanty boys, for her made up"
+"A generous purse next day"
+
+        }      } }   
+
+        \combine \null \vspace #0.1
+      \line { \bold "8."
+        \column {
+"They buried him with sorrow deep"
+"T'was on th first of May"
+"Come all of you bold shanty boys"
+"And for your comrades pray"
+
+"Engraved upon a hemlock tree"
+"That near the grave did grow"
+"Was th name and date of th sad, sad fate"
+"Of th shanty boy Monroe"
+
+        }      }
+
+
+
+                      \combine \null \vspace #0.1
+      \line { \bold "9."
+        \column {
+"Fair Clara did not long survive"
+"Her heart broke with th grief"
+"And scarcely two months past away"
+"Death came to her relief"
+
+"And when th time had passed away"
+"And she was called to go"
+"Her last request was granted to"
+"Be laid by young Monroe"
+
+        }      }
+  
+  
+  }
+
+}
+
