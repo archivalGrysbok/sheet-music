@@ -9,6 +9,8 @@
   #(set-paper-size "letter")
   left-margin = 1\in
   top-margin = 1\in
+bottom-margin = 1\in
+
 }
 
 
@@ -108,10 +110,7 @@ mynotes = {
   }
 
 
-
-
-
-\markup { 
+\markup { \fill-line {
   \column {
   
 
@@ -226,6 +225,6 @@ mynotes = {
   
   
   }
-
+}
 }
 
